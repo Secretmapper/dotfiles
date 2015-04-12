@@ -1,10 +1,20 @@
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export WORKON_HOME=~/virtual_envs
-export PGDATA=/usr/local/var/postgres
-source /usr/local/bin/virtualenvwrapper.sh
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export EDITOR='subl -w'
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-alias chrome="/Applications/Google\ \Chrome.app/Contents/MacOS/Google\ \Chrome"
-alias devchrome='chrome --host-resolver-rules="MAP *pencilcode.net.dev localhost:8008" --user-data-dir=/Users/Secretmapper/devchrome --ignore-certificate-errors http://pencilcode.net.dev/'
+export PATH="$PATH:~/.composer/vendor/bin"
+
+export NVM_DIR="/Users/Secretmapper/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export NODE_PATH=$NODE_PATH:/Users/Secretmapper/.node/lib/node_modules
+export PATH="/Users/Secretmapper/.node/bin:$PATH"
+
+export PACKAGE_DIRS="/Users/Secretmapper/code/meteor/packages"
+export NODE_PATH=/Users/Secretmapper/.nvm/v0.10.33/lib/node_modules:/Users/Secretmapper/.node/lib/node_modules
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# instead of aliasing, symlinks to override SPECIFIC system binaries
+# ln -s /usr/local/bin/vim /usr/local/bin/bin-override
+export PATH="/usr/local/bin/bin-override:$PATH"
