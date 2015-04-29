@@ -20,6 +20,9 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'tpope/vim-surround'
 Plugin 'thinca/vim-quickrun'
 
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
@@ -69,3 +72,11 @@ set guifont=Meslo\ for\ Powerline
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 let g:syntastic_php_checkers = ['php', 'phpcs']
+
+"" Ultisnips
+"let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
+
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
