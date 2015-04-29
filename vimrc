@@ -71,6 +71,9 @@ set guifont=Meslo\ for\ Powerline
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_thres = 3 
+let g:syntastic_cpp_cpplint_args = '--verbose=3'
 let g:syntastic_php_checkers = ['php', 'phpcs']
 
 "" Ultisnips
