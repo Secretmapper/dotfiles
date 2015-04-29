@@ -27,6 +27,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
+
+Plugin 'jdonaldson/vaxe'
 Bundle 'lukaszkorecki/CoffeeTags'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
@@ -64,6 +66,8 @@ nmap <leader>nerd :NERDTreeToggle <CR>
 nmap <leader>tag :TagbarToggle <CR>
 nmap <leader>r :QuickRun <CR>
 
+nmap <C-i> :call vaxe#ImportClass()<CR>
+
 "powerline
 let g:airline_powerline_fonts=1
 set laststatus=2
@@ -83,3 +87,5 @@ let g:UltiSnipsListSnippets="<c-s-tab>"
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 
+"haxe
+:set autowrite
