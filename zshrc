@@ -49,7 +49,7 @@ plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/Users/Secretmapper/.rvm/gems/ruby-1.9.3-p547/bin:/Users/Secretmapper/.rvm/gems/ruby-1.9.3-p547@global/bin:/Users/Secretmapper/.rvm/rubies/ruby-1.9.3-p547/bin:/usr/local/heroku/bin:/Users/Secretmapper/.composer/vendor/bin:/Users/Secretmapper/.node/bin:/Users/Secretmapper/.nvm/v0.10.33/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/Secretmapper/.rvm/bin:/Users/Secretmapper/.rvm/bin"
+#export PATH="/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/Users/Secretmapper/.rvm/gems/ruby-1.9.3-p547/bin:/Users/Secretmapper/.rvm/gems/ruby-1.9.3-p547@global/bin:/Users/Secretmapper/.rvm/rubies/ruby-1.9.3-p547/bin:/usr/local/heroku/bin:/Users/Secretmapper/.composer/vendor/bin:/Users/Secretmapper/.node/bin:/Users/Secretmapper/.nvm/v0.10.33/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/Secretmapper/.rvm/bin:/Users/Secretmapper/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
