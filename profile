@@ -34,3 +34,10 @@ code () {
         open -a "Visual Studio Code" --args "$F"
     fi
 }
+
+# install
+# npm
+# js-beautify
+# tern
+# vim (inside npm)
+eval "$(rbenv init -)"
