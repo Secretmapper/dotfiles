@@ -21,3 +21,4 @@ export PATH="/usr/local/bin/bin-override:$PATH"
 export MAGICK_HOME="$HOME/Desktop/ImageMagick-6.9.0"
 export PATH="$MAGICK_HOME/bin:$PATH"
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/:/usr/X11/lib/pkgconfig/:/opt/X11/lib/pkgconfig/
