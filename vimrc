@@ -34,7 +34,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'wavded/vim-stylus'
 Plugin 'valloric/MatchTagAlways'
-Plugin 'ehamberg/vim-cute-python'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
