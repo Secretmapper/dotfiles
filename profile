@@ -6,6 +6,8 @@ export NVM_DIR="/Users/Secretmapper/.nvm"
 export NODE_PATH=$NODE_PATH:/Users/Secretmapper/.node/lib/node_modules
 export PATH="/Users/Secretmapper/.node/bin:$PATH"
 
+source /usr/local/bin/virtualenvwrapper.sh
+
 export PACKAGE_DIRS="/Users/Secretmapper/code/meteor/packages"
 export NODE_PATH=/Users/Secretmapper/.nvm/v0.10.33/lib/node_modules:/Users/Secretmapper/.node/lib/node_modules
 
