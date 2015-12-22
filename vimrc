@@ -32,6 +32,7 @@ Plugin 'jdonaldson/vaxe'
 Bundle 'lukaszkorecki/CoffeeTags'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'jeroenbourgois/vim-actionscript'
 Plugin 'wavded/vim-stylus'
 Plugin 'valloric/MatchTagAlways'
 
