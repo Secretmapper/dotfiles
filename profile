@@ -23,7 +23,8 @@ export PATH="$MAGICK_HOME/bin:$PATH"
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/:/usr/X11/lib/pkgconfig/:/opt/X11/lib/pkgconfig/
 
-export PGDATA=/usr/local/var/postgres
+export PGDATA=/usr/local/var/posters
+export EDITOR="vim"
 
 code () {
     if [[ $# = 0 ]]
