@@ -10,6 +10,7 @@ Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'bling/vim-airline'
 "https://github.com/ryanoasis/vim-devicons#installation
