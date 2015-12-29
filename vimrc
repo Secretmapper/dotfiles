@@ -11,6 +11,8 @@ Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'bling/vim-airline'
+"https://github.com/ryanoasis/vim-devicons#installation
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'tpope/vim-fugitive'
@@ -76,6 +78,13 @@ set background=light
 colorscheme solarized
 filetype plugin indent on
 
+set encoding=utf8
+"powerline
+let g:airline_powerline_fonts=1
+set laststatus=2
+"set guifont=Meslo\ for\ Powerline\ Nerd\ Font\ Complete
+set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline\ Nerd\ Font\ Complete
+
 let mapleader=" "
 let NERDTreeMapOpenSplit='-'
 let NERDTreeMapActivateNode='l'
@@ -86,11 +95,6 @@ nmap <leader>tag :TagbarToggle <CR>
 nmap <leader>r :QuickRun <CR>
 
 nmap <C-i> :call vaxe#ImportClass()<CR>
-
-"powerline
-let g:airline_powerline_fonts=1
-set laststatus=2
-set guifont=Meslo\ for\ Powerline
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
