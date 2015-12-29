@@ -30,6 +30,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
 
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'darthmall/vim-vue'
 Plugin 'slim-template/vim-slim.git'
