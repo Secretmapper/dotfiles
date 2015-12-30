@@ -17,6 +17,7 @@ Plugin 'bling/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'mileszs/ack.vim'
