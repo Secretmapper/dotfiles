@@ -19,6 +19,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-pandoc/vim-pandoc'
