@@ -94,6 +94,8 @@ let mapleader=" "
 let NERDTreeMapOpenSplit='-'
 let NERDTreeMapActivateNode='l'
 let NERDTreeMapCloseDir='h'
+set splitbelow
+set splitright
 
 nmap <leader>ft :NERDTreeToggle <CR>
 nmap <leader>tag :TagbarToggle <CR>
