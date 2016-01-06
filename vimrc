@@ -67,6 +67,7 @@ set title
 set noswapfile
 set clipboard=unnamed
 
+set autoread
 set autoindent
 set cindent
 set shiftwidth=2
@@ -105,13 +106,18 @@ nmap <C-i> :call vaxe#ImportClass()<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+"
+" Syntastic
+"
 "syntastic: ctrl-w E for error check
 let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_cpp_cpplint_thres = 3 
 let g:syntastic_cpp_cpplint_args = '--verbose=3'
 let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+map <C-r> :!standard % --format<CR>:redraw<CR>
 
 "" Ultisnips
 "let g:UltiSnipsExpandTrigger="<c-j>"
