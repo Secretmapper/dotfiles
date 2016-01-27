@@ -117,7 +117,7 @@ let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-map <C-r> :!standard % --format<CR>:redraw<CR>
+"map <C-R> :!standard % --format<CR>:redraw<CR>
 
 "" Ultisnips
 "let g:UltiSnipsExpandTrigger="<c-j>"
