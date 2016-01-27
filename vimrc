@@ -133,8 +133,12 @@ let g:ycm_key_list_previous_completion=[]
 :set autowrite
 
 "typescript
+"autocmd FileType typescript setlocal completeopt+=menu,preview
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
