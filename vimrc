@@ -106,6 +106,9 @@ nmap <C-i> :call vaxe#ImportClass()<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+"ctrl+p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 "
 " Syntastic
 "
