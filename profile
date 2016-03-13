@@ -41,4 +41,5 @@ code () {
 # js-beautify
 # tern
 # vim (inside npm)
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
