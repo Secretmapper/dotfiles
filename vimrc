@@ -104,6 +104,28 @@ nmap <leader>r :QuickRun <CR>
 
 nmap <C-i> :call vaxe#ImportClass()<CR>
 
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+"tab movement
+map <C-1> 1gt
+map <C-2> 2gt
+map <C-3> 3gt
+map <C-4> 4gt
+map <C-5> 5gt
+map <C-6> 6gt
+map <C-7> 7gt
+map <C-8> 8gt
+map <C-9> 9gt
+map <C-0> :tablast<CR>
+
+"edit based on path
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
