@@ -130,6 +130,7 @@ map <leader>et :tabe %%
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|tmp'
 
 "use ag with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
