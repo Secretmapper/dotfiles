@@ -36,6 +36,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
 
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 Plugin 'lambdatoast/elm.vim'
@@ -129,7 +130,6 @@ map <leader>et :tabe %%
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 "use ag with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
