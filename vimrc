@@ -9,6 +9,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Shougo/vimshell.vim'
