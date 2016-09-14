@@ -83,3 +83,8 @@ source ~/dotfiles/tmuxinator.zsh
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 export PATH="/usr/local/sbin:$PATH"
+
+
+# Automatically added by Platform.sh CLI installer
+export PATH="/Users/Secretmapper/.platformsh/bin:$PATH"
+. '/Users/Secretmapper/.platformsh/shell-config.rc' 2>/dev/null
