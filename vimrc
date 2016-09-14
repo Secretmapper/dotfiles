@@ -8,9 +8,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-projectionist'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'bling/vim-airline'
@@ -135,6 +137,19 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|tmp'
+
+let g:projectionist_heuristics = {
+      \   "*": {
+      \     "*.js": {
+      \       "alternate": "{dirname}/__tests__/{basename}-test.js",
+      \       "type": "source"
+      \     },
+      \     "**/__tests__/*-test.js": {
+      \       "alternate": "{dirname}/{basename}.js",
+      \       "type": "test"
+      \     }
+      \   }
+      \ }
 
 "use ag with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
