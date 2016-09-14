@@ -36,6 +36,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'flowtype/vim-flow'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-bundler'
@@ -146,10 +147,12 @@ let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_cpp_cpplint_thres = 3 
 let g:syntastic_cpp_cpplint_args = '--verbose=3'
 let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_javascript_checkers = ['standard', 'flow']
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+nnoremap <C-w>E :SyntasticCheck<CR>
 "map <C-R> :!standard % --format<CR>:redraw<CR>
+
+let g:flow#enable = 0
 
 "" Ultisnips
 "let g:UltiSnipsExpandTrigger="<c-j>"
@@ -183,3 +186,5 @@ let g:mta_filetypes = {
     \ 'xml' : 1,
     \ 'jinja' : 1,
     \}
+
+au BufNewFile,BufRead *.tag setlocal ft=javascript
