@@ -96,13 +96,14 @@ set encoding=utf8
 "powerline
 let g:airline_powerline_fonts=1
 set laststatus=2
-"set guifont=Meslo\ for\ Powerline\ Nerd\ Font\ Complete
-set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline\ Nerd\ Font\ Complete
+set guifont=Consolas\ for\ Powerline
+let g:Powerline_symbols="fancy"
 
 let mapleader=" "
 let NERDTreeMapOpenSplit='-'
 let NERDTreeMapActivateNode='l'
 let NERDTreeMapCloseDir='h'
+let NERDSpaceDelims=1
 set splitbelow
 set splitright
 
