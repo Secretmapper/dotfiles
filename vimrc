@@ -13,7 +13,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-projectionist'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'bling/vim-airline'
 "https://github.com/ryanoasis/vim-devicons#installation
@@ -139,6 +139,7 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|tmp'
+map <C-P> :FZF<CR>
 
 let g:projectionist_heuristics = {
       \   "*": {
