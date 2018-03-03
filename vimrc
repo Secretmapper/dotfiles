@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
+Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
