@@ -1,74 +1,67 @@
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'daylerees/colour-schemes', { 'rtp':'vim/' }
-
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-projectionist'
-Plugin 'junegunn/fzf'
-Plugin 'Shougo/vimshell.vim'
-Plugin 'bling/vim-airline'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-projectionist'
+Plug 'junegunn/fzf'
+Plug 'Shougo/vimshell.vim'
+Plug 'bling/vim-airline'
 "https://github.com/ryanoasis/vim-devicons#installation
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
-Plugin 'mileszs/ack.vim'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plug 'mileszs/ack.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plugin 'tpope/vim-surround'
-Plugin 'thinca/vim-quickrun'
+Plug 'tpope/vim-surround'
+Plug 'thinca/vim-quickrun'
 
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-Plugin 'mattn/emmet-vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'flowtype/vim-flow'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'mattn/emmet-vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'marijnh/tern_for_vim'
+Plug 'flowtype/vim-flow'
 
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'darthmall/vim-vue'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'keith/swift.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'jparise/vim-graphql'
-Plugin 'jdonaldson/vaxe'
-Plugin 'leafgarland/typescript-vim'
-Bundle 'clausreinke/typescript-tools.vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc.vim'
-Bundle 'lukaszkorecki/CoffeeTags'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'jeroenbourgois/vim-actionscript'
-Plugin 'wavded/vim-stylus'
-Plugin 'valloric/MatchTagAlways'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+Plug 'lambdatoast/elm.vim'
+Plug 'darthmall/vim-vue'
+Plug 'slim-template/vim-slim.git'
+Plug 'digitaltoad/vim-jade'
+Plug 'pangloss/vim-javascript'
+Plug 'elixir-lang/vim-elixir'
+Plug 'keith/swift.vim'
+Plug 'mxw/vim-jsx'
+Plug 'jparise/vim-graphql'
+Plug 'jdonaldson/vaxe'
+Plug 'leafgarland/typescript-vim'
+" Bundle 'clausreinke/typescript-tools.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim'
+" Bundle 'lukaszkorecki/CoffeeTags'
+Plug 'groenewege/vim-less'
+Plug 'kchmck/vim-coffee-script'
+Plug 'jeroenbourgois/vim-actionscript'
+Plug 'wavded/vim-stylus'
+Plug 'valloric/MatchTagAlways'
+call plug#end()
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-syntax on
 set rnu
 set number
 set ruler
