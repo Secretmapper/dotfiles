@@ -25,6 +25,8 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/:/usr/X11/lib/pkgconfig/:/opt/X1
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export PGDATA=/usr/local/var/posters
+alias v="nvim"
+alias vim="nvim"
 export EDITOR="vim"
 
 code () {
