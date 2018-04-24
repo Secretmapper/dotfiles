@@ -1,6 +1,6 @@
 set nocompatible
-call plug#begin('~/.vim/bundle')
 
+call plug#begin('~/.vim/bundle')
 Plug 'altercation/vim-colors-solarized'
 Plug 'daylerees/colour-schemes', { 'rtp':'vim/' }
 
@@ -31,7 +31,14 @@ Plug 'thinca/vim-quickrun'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
-Plug 'Valloric/YouCompleteMe'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'marijnh/tern_for_vim'
@@ -129,6 +136,7 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+let g:deoplete#enable_at_startup = 1
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
@@ -180,7 +188,7 @@ let g:ycm_key_list_previous_completion=[]
 "autocmd FileType typescript setlocal completeopt+=menu,preview
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-set ballooneval
+" set ballooneval
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
