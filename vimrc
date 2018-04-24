@@ -31,6 +31,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -38,6 +39,10 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'slashmili/alchemist.vim'
+Plug 'mhartington/nvim-typescript'
+
 " Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
@@ -136,7 +141,24 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+" ====
+" start deoplete
+" ====
 let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filter = 0
+let g:deoplete#sources#ternjs#case_insensitive = 0
+let g:deoplete#sources#ternjs#guess = 1
+let g:deoplete#sources#ternjs#sort = 1
+let g:deoplete#sources#ternjs#expand_word_forward = 1
+let g:deoplete#sources#ternjs#omit_object_prototype = 1
+" ====
+" end deoplete
+" ====
+
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "ctrl+p
