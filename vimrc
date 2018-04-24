@@ -81,6 +81,7 @@ set title
 set noswapfile
 set clipboard=unnamed
 
+set lazyredraw
 set autoread
 set autoindent
 set cindent
