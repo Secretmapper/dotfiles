@@ -32,6 +32,10 @@ Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -55,10 +59,10 @@ Plug 'tpope/vim-rails'
 Plug 'lambdatoast/elm.vim'
 Plug 'darthmall/vim-vue'
 Plug 'digitaltoad/vim-jade'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'keith/swift.vim'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
 Plug 'jdonaldson/vaxe'
 Plug 'leafgarland/typescript-vim'
@@ -230,3 +234,18 @@ let g:mta_filetypes = {
     \}
 
 au BufNewFile,BufRead *.tag setlocal ft=javascript
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+set runtimepath+=~/.vim/bundle/LanguageClient-neovim
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript': ['javascript-typescript-stdio']
+    \ }
+
+let g:LanguageClient_autoStart = 1
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
