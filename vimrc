@@ -46,6 +46,7 @@ endif
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'slashmili/alchemist.vim'
 Plug 'mhartington/nvim-typescript'
+Plug 'zchee/deoplete-clang'
 
 " Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
@@ -242,6 +243,8 @@ set runtimepath+=~/.vim/bundle/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'javascript': ['javascript-typescript-stdio']
+    \ 'cpp': ['cquery', '--log-file=/tmp/cq.log'],
+    \ 'c': ['cquery', '--log-file=/tmp/cq.log'],
     \ }
 
 let g:LanguageClient_autoStart = 1
