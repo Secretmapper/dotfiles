@@ -43,7 +43,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'slashmili/alchemist.vim'
 Plug 'mhartington/nvim-typescript'
 Plug 'zchee/deoplete-clang'
@@ -51,7 +50,6 @@ Plug 'zchee/deoplete-clang'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
-Plug 'marijnh/tern_for_vim'
 Plug 'flowtype/vim-flow'
 
 Plug 'nathanaelkane/vim-indent-guides'
