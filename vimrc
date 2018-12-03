@@ -43,11 +43,10 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'Shougo/echodoc'
 Plug 'slashmili/alchemist.vim'
-Plug 'mhartington/nvim-typescript'
 Plug 'zchee/deoplete-clang'
 
-" Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'flowtype/vim-flow'
@@ -66,7 +65,6 @@ Plug 'jparise/vim-graphql'
 Plug 'jdonaldson/vaxe'
 Plug 'leafgarland/typescript-vim'
 " Bundle 'clausreinke/typescript-tools.vim'
-Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
 " Bundle 'lukaszkorecki/CoffeeTags'
 Plug 'groenewege/vim-less'
@@ -144,6 +142,9 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " ====
 " start deoplete
 " ====
@@ -184,17 +185,6 @@ let g:projectionist_heuristics = {
 "use ag with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-"
-" Syntastic
-"
-"syntastic: ctrl-w E for error check
-let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_cpp_cpplint_thres = 3 
-let g:syntastic_cpp_cpplint_args = '--verbose=3'
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_javascript_checkers = ['standard', 'flow']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR>
 "map <C-R> :!standard % --format<CR>:redraw<CR>
 
 let g:flow#enable = 0
@@ -202,9 +192,6 @@ let g:flow#enable = 0
 "" Ultisnips
 "let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsListSnippets="<c-s-tab>"
-
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
 
 "haxe
 :set autowrite
@@ -214,8 +201,6 @@ let g:ycm_key_list_previous_completion=[]
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 " set ballooneval
-autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
-autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 set nofoldenable    " disable folding
 
@@ -238,13 +223,12 @@ au BufNewFile,BufRead *.tag setlocal ft=javascript
 set hidden
 
 set runtimepath+=~/.vim/bundle/LanguageClient-neovim
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'javascript': ['javascript-typescript-stdio']
-    \ 'cpp': ['cquery', '--log-file=/tmp/cq.log'],
-    \ 'c': ['cquery', '--log-file=/tmp/cq.log'],
-    \ }
 
+let g:LanguageClient_serverCommands = {
+      \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
+      \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+      \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+      \ }
 let g:LanguageClient_autoStart = 1
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
