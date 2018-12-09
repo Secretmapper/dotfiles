@@ -32,6 +32,7 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export PGDATA=/usr/local/var/posters
 alias v="nvim"
 alias aseprite="$HOME/Library/Application\ Support/Steam/steamapps/common/Aseprite/Aseprite.app/Contents/MacOS/aseprite"
+alias vi="nvim"
 alias vim="nvim"
 export EDITOR="vim"
 
