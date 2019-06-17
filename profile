@@ -53,7 +53,25 @@ code () {
 # js-beautify
 # tern
 # vim (inside npm)
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+
+## arduino
+export ARDUINO_DIR="/Applications/Arduino.app/Contents/Resources/Java"
+export ARDMK_DIR="/usr/local"
+export AVR_TOOLS_DIR="/usr"
+export MONITOR_PORT="/dev/ttyACM0"
+export BOARD_TAG="mega2560"
+export PATH="$ARDMK_DIR/bin/:$PATH"
+
+# :/ arli has a weird bin it seems
+export PATH="/usr/local/lib/ruby/gems/2.6.0/gems/arli-1.4.0/exe:$PATH"
+## arduino end
 
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(pyenv init -)"
+#ADDED BY 010 EDITOR
+export PATH="$PATH:/Applications/010 Editor.app/Contents/CmdLine"
+export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
+export PATH="$HOME/frameworks/flex/bin:$PATH"
+export IDF_PATH=~/esp/esp-idf
+export EDITOR="nvim"
