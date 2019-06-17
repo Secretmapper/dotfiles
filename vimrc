@@ -13,7 +13,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'junegunn/fzf'
 Plug 'Shougo/vimshell.vim'
 Plug 'bling/vim-airline'
-"https://github.com/ryanoasis/vim-devicons#installation
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -29,7 +28,6 @@ Plug 'tpope/vim-surround'
 Plug 'thinca/vim-quickrun'
 
 Plug 'honza/vim-snippets'
-" Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
@@ -41,8 +39,6 @@ Plug 'neoclide/coc-tslint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
 Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
-" Plug 'slashmili/alchemist.vim'
-" Plug 'zchee/deoplete-clang'
 
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
@@ -54,18 +50,14 @@ Plug 'tpope/vim-rails'
 Plug 'lambdatoast/elm.vim'
 Plug 'darthmall/vim-vue'
 Plug 'digitaltoad/vim-jade'
-" Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'sudar/vim-arduino-syntax'
 Plug 'coddingtonbear/neomake-platformio'
 Plug 'keith/swift.vim'
-" Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
 Plug 'jdonaldson/vaxe'
 Plug 'leafgarland/typescript-vim'
-" Bundle 'clausreinke/typescript-tools.vim'
 Plug 'Shougo/vimproc.vim'
-" Bundle 'lukaszkorecki/CoffeeTags'
 Plug 'groenewege/vim-less'
 Plug 'kchmck/vim-coffee-script'
 Plug 'jeroenbourgois/vim-actionscript'
@@ -145,26 +137,6 @@ let g:python_host_prog = '/Users/secretmapper/.pyenv/versions/neovim2/bin/python
 let g:python2_host_prog = '/Users/secretmapper/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/secretmapper/.pyenv/versions/neovim3/bin/python'
 
-" ====
-" start deoplete
-" ====
-let g:deoplete#enable_at_startup = 1
-
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#depths = 1
-let g:deoplete#sources#ternjs#docs = 1
-let g:deoplete#sources#ternjs#filter = 0
-let g:deoplete#sources#ternjs#case_insensitive = 0
-let g:deoplete#sources#ternjs#guess = 1
-let g:deoplete#sources#ternjs#sort = 1
-let g:deoplete#sources#ternjs#expand_word_forward = 1
-let g:deoplete#sources#ternjs#omit_object_prototype = 1
-" ====
-" end deoplete
-" ====
-
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-
 "ctrl+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|tmp'
 map <C-P> :FZF<CR>
@@ -185,22 +157,14 @@ let g:projectionist_heuristics = {
 "use ag with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-"map <C-R> :!standard % --format<CR>:redraw<CR>
-
 let g:flow#enable = 0
-
-"" Ultisnips
-"let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
 
 "haxe
 :set autowrite
 
 "typescript
-"autocmd FileType typescript setlocal completeopt+=menu,preview
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-" set ballooneval
 
 set nofoldenable    " disable folding
 
@@ -208,14 +172,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'javascript' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \}
 
 au BufNewFile,BufRead *.tag setlocal ft=javascript
 
