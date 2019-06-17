@@ -16,7 +16,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # instead of aliasing, symlinks to override SPECIFIC system binaries
 # ln -s /usr/local/bin/vim /usr/local/bin/bin-override
-export PATH="/usr/local/bin/bin-override:$PATH"
+export PATH="/usr/local/bin:/usr/local/bin/bin-override:$PATH"
+export PATH="/usr/local/Cellar/ruby/2.6.1/bin:$PATH"
 
 export MAGICK_HOME="$HOME/Desktop/ImageMagick-6.9.0"
 export PATH="$MAGICK_HOME/bin:$PATH"
