@@ -141,8 +141,9 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/Users/secretmapper/.pyenv/versions/neovim2/bin/python'
+let g:python2_host_prog = '/Users/secretmapper/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/secretmapper/.pyenv/versions/neovim3/bin/python'
 
 " ====
 " start deoplete
