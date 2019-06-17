@@ -32,18 +32,6 @@ Plug 'honza/vim-snippets'
 " Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 
-" Plug 'autozimu/LanguageClient-neovim', {
-    " \ 'branch': 'next',
-    " \ 'do': 'bash install.sh',
-    " \ }
-" if has('nvim')
-  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-  " Plug 'Shougo/deoplete.nvim'
-  " Plug 'roxma/nvim-yarp'
-  " Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" Plug 'Shougo/echodoc'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " Plug 'slashmili/alchemist.vim'
 " Plug 'zchee/deoplete-clang'
@@ -224,19 +212,6 @@ au BufNewFile,BufRead *.tag setlocal ft=javascript
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
-
-set runtimepath+=~/.vim/bundle/LanguageClient-neovim
-
-let g:LanguageClient_serverCommands = {
-      \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
-      \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-      \ 'rust': ['rustup', 'run', 'stable', 'rls'],
-      \ }
-let g:LanguageClient_autoStart = 1
-
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 "start coc"
 " if hidden not set, TextEdit might fail.
